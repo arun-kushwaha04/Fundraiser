@@ -4,7 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "mocha"
+        "test": "mocha",
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
     },
     "author": "",
     "license": "ISC",
