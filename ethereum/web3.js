@@ -2,8 +2,8 @@ import dotenv from 'dotenv';
 import Web3 from 'web3';
 let web3;
 
-dotenv.require();
-if (typeof window !== undefined && typeof window.web3 !== undefined) {
+dotenv.config();
+if (typeof window !== 'undefined' && typeof window.web3 !== 'undefined') {
     // this means we are in a brwoser with metamask installed
     web3 = new Web3(window.web3.currentProvider);
 } else {
