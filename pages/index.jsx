@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Button, Grid} from 'semantic-ui-react';
 import Layout from '../components/layout';
 import contractInterface from '../ethereum/factory';
 
@@ -18,7 +18,14 @@ function HomePage({ deployedCampaigns }) {
  }, []);
  return (
   <Layout>
+  <Grid>
+  <Grid.Column width={12}>
    <Card.Group items={items} />
+   </Grid.Column>
+   <Grid.Column width={3}>
+   <Button primary>Create Campaign</Button>
+   </Grid.Column>
+   </Grid>
   </Layout>
  );
 }
