@@ -34,7 +34,7 @@ const CreateCampaign = () => {
       <Form error={!!errorMessage}>
         <Form.Field required>
           <label>Minimum Contribution For Campaign</label>
-          <Input fluid label='wei' labelPosition='right' value={minContri} onChange={(e) => {setErrorMessage('');setMinContri(e.target.value)}}/>
+          <Input label='wei' labelPosition='right' value={minContri} onChange={(e) => {setErrorMessage('');setMinContri(e.target.value)}}/>
         </Form.Field>
         <Message
           error

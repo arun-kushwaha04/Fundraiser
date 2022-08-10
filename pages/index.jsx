@@ -10,7 +10,7 @@ function HomePage({ deployedCampaigns }) {
   const temp = deployedCampaigns.map((address) => {
    return {
     header: address,
-    description: <a>View Campaign</a>,
+    description: <Link route={`/campaigns/${address}`}><a><p>View Campaign</p></a></Link>,
     fluid: true,
    };
   });
