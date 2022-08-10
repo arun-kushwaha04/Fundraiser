@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button, Grid} from 'semantic-ui-react';
+import {Link} from "../routes"
 import Layout from '../components/layout';
 import contractInterface from '../ethereum/factory';
 
@@ -23,7 +24,9 @@ function HomePage({ deployedCampaigns }) {
    <Card.Group items={items} />
    </Grid.Column>
    <Grid.Column width={3}>
-   <Button primary>Create Campaign</Button>
+   <Link route='/campaigns/new'>
+   <a><Button primary>Create Campaign</Button></a>
+   </Link>
    </Grid.Column>
    </Grid>
   </Layout>

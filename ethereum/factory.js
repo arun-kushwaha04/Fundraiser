@@ -1,8 +1,8 @@
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 import web3 from './web3';
 import CampaignFactory from './build/CampaignFactory.json';
 
-dotenv.config();
+// dotenv.config();
 
 const instance = new web3.eth.Contract(
     CampaignFactory.abi,
