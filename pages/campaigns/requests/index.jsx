@@ -36,8 +36,8 @@ const RequestIndex = (props) => {
                   key={index}
                   id={index}
                   request={request}
-                  address={this.props.address}
-                  approversCount={this.props.approversCount}
+                  address={props.address}
+                  approversCount={props.approversCount}
                 />
               );
             })
@@ -58,7 +58,7 @@ RequestIndex.getInitialProps = async(props) => {
     Array(parseInt(requestCount))
       .fill()
       .map((element, index) => {
-        return campaign.methods.requests(index).call();
+        return campaign.methods.campaignRequest(index).call();
       })
   );
   return { address, requests, requestCount, approversCount };

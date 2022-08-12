@@ -24,19 +24,18 @@ const RequestRow = (props) => {
 
   const { Row, Cell } = Table;
   const { id, request, approversCount } = props;
-  const readyToFinalize = request.approvalCount > approversCount / 2;
-
+  const readyToFinalize = request.approversCount > approversCount / 2;
   return (
     <Row
-      disabled={request.complete}
-      positive={readyToFinalize && !request.complete}
+      disabled={request.isCompleted}
+      positive={readyToFinalize && !request.isCompleted}
     >
       <Cell>{id}</Cell>
       <Cell>{request.description}</Cell>
-      <Cell>{web3.utils.fromWei(request.value, 'ether')}</Cell>
-      <Cell>{request.recipient}</Cell>
+      <Cell>{web3.utils.fromWei(request.moneyRequired, 'ether')}</Cell>
+      <Cell>{request.recepient}</Cell>
       <Cell>
-        {request.approvalCount}/{approversCount}
+        {request.approversCount}/{approversCount}
       </Cell>
       <Cell>
         {request.complete ? null : (

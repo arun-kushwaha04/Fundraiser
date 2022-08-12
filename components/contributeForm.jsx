@@ -16,7 +16,7 @@ const ContributeForm = (props) => {
     setErrorMessage('')
     try {
       const accounts = await web3.eth.getAccounts();
-      await campaign.methods.contribute().send({
+      await campaign.methods.addContributers().send({
         from: accounts[0],
         value: web3.utils.toWei(value, 'ether')
       });
